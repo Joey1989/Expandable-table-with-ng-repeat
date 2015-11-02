@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="userCtrl">
+
+
+
+
+          
+          
+
+<div class="col-lg-6">
+    <div class="panel panel-default">
+        <div class="panel-heading"><h3>Object Store</h3></div>
+        <div class="panel-body">
+            <table class="table table-condensed" style="border-collapse:collapse;">
+
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>age</th>
+                        <th>sex</th>
+                        
+                    </tr>
+                </thead>
+
+                <tbody >
+                    <tr data-toggle="collapse" data-target="#demo{{user.id}}" class="accordion-toggle" ng-repeat-start="user in users">
+                      <div> 
+                        <td>{{user.name}}</td>
+                        <td>{{user.age}}</td>
+                        <td>{{user.sex}}</td>
+                      </div>
+                    </tr>
+                      
+                  
+                    <tr ng-repeat-end="">
+                        <td colspan="12" class="hiddenRow">
+                            <div class="accordian-body collapse" id="demo{{user.id}}"> 
+                                
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                          <td>job</td>
+                                          <td>id</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                          <td>{{user.job}}</td>
+                                          <td>{{user.id}}</td>
+                                        </tr>
+                       
+                                    </tbody>
+                                </table>
+
+                            </div> 
+                        </td>
+                     
+                    </tr>
+                      
+                   
+              
+                    
+                  
+                </tbody>
+            </table>
+        </div>
+
+    </div> 
+
+</div>
+
+
+</body>
+</html>
